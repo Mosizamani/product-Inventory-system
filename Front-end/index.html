@@ -21,9 +21,32 @@
             <button type="submit">Add Product</button>
         </form>
 
+        <!-- Search by ID -->
+        <div class="search-container">
+            <input type="text" id="searchId" placeholder="Search by Product ID">
+            <button onclick="searchProductById()">Search</button>
+        </div>
+
+        <!-- Sorting and Filtering -->
+        <div class="filter-sort-container">
+            <select id="sortOptions">
+                <option value="">Sort By</option>
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+                <option value="category">Category</option>
+                <option value="stockQuantity">Stock Quantity</option>
+            </select>
+
+            <select id="filterCategory">
+                <option value="">Filter by Category</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Home Appliances">Home Appliances</option>
+                <!-- Add more categories as needed -->
+            </select>
+        </div>
+
         <!-- Product List -->
-        <h2>Product List</h2>
-        <div id="productList"></div>
         <table>
             <thead>
                 <tr>
@@ -32,6 +55,7 @@
                     <th>Price</th>
                     <th>Category</th>
                     <th>Stock Quantity</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody id="productTableBody"></tbody>

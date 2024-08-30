@@ -1,70 +1,127 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* General Reset */
+body, h1, h2, table, form, input, select, button {
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px;
+}
+
+/* Container */
 .container {
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+/* Headings */
+h1 {
     text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
 }
 
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
-form input {
-    margin-bottom: 10px;
+form input, form button {
     padding: 10px;
     font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 form button {
-    padding: 10px;
-    font-size: 16px;
     background-color: #007bff;
-    color: #fff;
+    color: #ffffff;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
     background-color: #0056b3;
 }
 
-#productList {
+/* Search and Filter-Sort Styles */
+.search-container, .filter-sort-container {
     display: flex;
-    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
-.product {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.search-container input, .filter-sort-container select {
     padding: 10px;
+    font-size: 16px;
     border: 1px solid #ddd;
-    margin-bottom: 10px;
+    border-radius: 4px;
 }
 
-.product button {
+.search-container button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #218838;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td button {
     padding: 5px 10px;
     background-color: #dc3545;
-    color: #fff;
+    color: #ffffff;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.product button:hover {
+td button:hover {
     background-color: #c82333;
 }
